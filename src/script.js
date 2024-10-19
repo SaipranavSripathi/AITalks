@@ -1,14 +1,7 @@
-import Cartesia from "@cartesia/cartesia-js";
 // Check for browser compatibility
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
 recognition.interimResults = true;
-
-// Initialize Cartesia (example code)
-const cartesia = new Cartesia({
-    apiKey: 'YOUR_API_KEY',  // Use your actual API key here
-});
-
 
 let isListening = false;
 
@@ -37,10 +30,6 @@ async function startConversation() {
     const greeting = `Good day! Let's begin our discussion about "${scenario}". You can start whenever you're ready.`;
     document.getElementById('feedback').innerHTML += `<br>${greeting}`;
 
-    // Use Cartesia to speak the greeting
-    if (cartesia) {
-        cartesia.speak(greeting); // Assuming 'cartesia' is initialized and available
-    }
 }
 
 // Start voice recognition
@@ -85,24 +74,20 @@ async function sendMessage(message) {
     }
 
     // Fetch response from Fetch.ai endpoint
-    const response = await fetch('YOUR_FETCHAI_ENDPOINT', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ message, scenario }),
-    });
+    // const response = await fetch('YOUR_FETCHAI_ENDPOINT', {
+    //     method: 'POST',
+    //     headers: {
+    //         'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify({ message, scenario }),
+    // });
 
-    const data = await response.json();
+    //const data = await response.json();
 
     // Display the AI response
-    feedback.innerHTML = `Response: ${data.response || "No response found."}`;
+    data='Hello how are you?'
+    feedback.innerHTML = `Response: ${data || "No response found."}`;
 
-    // Use Cartesia to speak the response
-    if (data.response) {
-        document.getElementById('status').innerHTML = "Speaking..."; // Update status
-        if (cartesia) {
-            cartesia.speak(data.response);
-        }
-    }
+    const utterance = new SpeechSynthesisUtterance(data);
+    window.speechSynthesis.speak(utterance);
 }
