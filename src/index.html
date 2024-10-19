@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversation Practice App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Conversation Practice App</h1>
+    
+    <label for="scenario">Scenario (Describe the discussion context):</label>
+    <input type="text" id="scenario" placeholder="e.g., Interview practice, customer service discussion, etc." />
+
+    <div>
+        <button id="startConversationBtn">Start Conversation</button>
+    </div>
+
+    <label for="conversation">Your Message:</label>
+    <textarea id="conversation" rows="4" placeholder="Your message will appear here" disabled></textarea>
+
+    <div>
+        <button id="startVoiceBtn" disabled>Start Voice Recognition</button>
+        <button id="stopVoiceBtn" disabled>Stop Voice Recognition</button>
+    </div>
+
+    <div id="feedback"></div>
+    <div id="status"></div> <!-- Status of listening/speaking -->
+
+    <script src="script.js"></script>
+    <script src="https://cdn.cartesia.ai/sdk.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "name": "calhacks-11",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@cartesia/cartesia-js": "^1.1.0",
+    "@sanity/client": "^6.22.2",
+    "express": "^4.21.1",
+    "fluent-ffmpeg": "^2.1.3"
+  }
+}
