@@ -1,0 +1,2 @@
+uagents==0.2.0   # For Fetch.ai agent framework
+requests==2.31.0  # For making HTTP requests

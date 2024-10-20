@@ -5,29 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversation Practice App</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Conversation Practice App</h1>
-    
-    <label for="scenario">Scenario (Describe the discussion context):</label>
-    <input type="text" id="scenario" placeholder="e.g., Interview practice, customer service discussion, etc." />
+    <div class="container">
+        <h1>AI Talks!!</h1>
+        
+        <label for="scenario">Scenario (Describe the discussion context):</label>
+        <input type="text" id="scenario" placeholder="e.g., Interview practice, customer service discussion, etc." />
 
-    <div>
-        <button id="startConversationBtn">Start Conversation</button>
+        <div class="button-container">
+            <button id="startConversationBtn" class="primary-btn">Start Conversation</button>
+        </div>
+
+        <!-- <label for="audioFile">Upload Audio File:</label>
+        <input type="file" id="audioFile" accept="audio/*" class="file-input"/> -->
+
+        <label for="conversation">Your Message:</label>
+        <textarea id="conversation" rows="4" placeholder="Your message will appear here" disabled></textarea>
+
+        <div class="button-container">
+            <button id="startVoiceBtn" class="secondary-btn" disabled>Start Voice Recognition</button>
+            <button id="stopVoiceBtn" class="secondary-btn" disabled>Stop Voice Recognition</button>
+        </div>
+
+        <div id="feedback"></div>
+        <div id="status"></div> <!-- Status of listening/speaking -->
     </div>
-
-    <label for="conversation">Your Message:</label>
-    <textarea id="conversation" rows="4" placeholder="Your message will appear here" disabled></textarea>
-
-    <div>
-        <button id="startVoiceBtn" disabled>Start Voice Recognition</button>
-        <button id="stopVoiceBtn" disabled>Stop Voice Recognition</button>
-    </div>
-
-    <div id="feedback"></div>
-    <div id="status"></div> <!-- Status of listening/speaking -->
 
     <script src="script.js"></script>
-
 </body>
 </html>
