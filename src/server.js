@@ -15,7 +15,7 @@ const port = process.env.PORT || 3000;
 app.post('/return_text', async (req, res) => {
   const Groq = require('groq-sdk');
 
-  const groq = new Groq({apiKey: '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'});
+  const groq = new Groq({apiKey: 'key'});
   async function main() {
     const chatCompletion = await groq.chat.completions.create({
       "messages": [
