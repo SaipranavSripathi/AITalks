@@ -130,7 +130,7 @@ async function sendMessage(message) {
     //         method: 'POST',
     //         body: formData,
     //         headers: {
-    //             'Authorization': 'Bearer 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', // Your API key
+    //             'Authorization': 'Bearer ', // Your API key
     //             'model': 'distil-whisper-large-v3-en'
     //             // Let the browser automatically handle formData headers
     //         },
